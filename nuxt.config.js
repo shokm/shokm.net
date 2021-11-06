@@ -15,7 +15,19 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/css/uikit.min.css'
+      }
     ],
     script: [
       { src: 'https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit.min.js', defer: true },

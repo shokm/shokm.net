@@ -107,9 +107,6 @@ export default {
 }
 </script>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap");
-@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
-@import url("https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/css/uikit.min.css");
 @media screen and (max-width: 480px) { 
     /* 画面サイズが480pxまで */
     .innner {
