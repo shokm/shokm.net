@@ -27,9 +27,7 @@
                     <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
                         <div class="kiwi_maru uk-card uk-card-default uk-card-body">
                             <h3><i class="fas fa-user"></i> 自己紹介</h3>
-                            <div class="text">
-                              <span v-html="selfintro.text"></span>
-                            </div>
+                            <span class="text" v-html="selfintro.text"></span>
                             <p>
                                 <i class="fab fa-twitter-square"></i> <a id="twitter" v-bind:href='"https://twitter.com/" + selfintro.twitter'>Twitter</a> |
                                 <i class="fab fa-github-square"></i> <a id="github" v-bind:href='"https://github.com/" + selfintro.github'>Github</a>
@@ -48,13 +46,13 @@
                         <div>
                             <div class="uk-card-small uk-card-default uk-card-body">
                                 <h3 class="uk-card-title"><i class="fas fa-code"></i> プログラミング</h3>
-                                <p v-html="selfintro.pg"></p>
+                                <span v-html="selfintro.pg"></span>
                             </div>
                         </div>
                         <div>
                             <div class="uk-card-small uk-card-default uk-card-body" uk-lightbox>
                                 <h3 class="uk-card-title"><i class="fas fa-music"></i> 音楽</h3>
-                                <p v-html="selfintro.mus"></p>
+                                <span v-html="selfintro.mus"></span>
                             </div>
                         </div>
                     </div>
@@ -158,7 +156,6 @@ body {
     /*
     background-color: #D95555;
     */
-
 }
 #box2 {
     width: 100%;
