@@ -13,10 +13,10 @@
     </div>
     <div id="contents">
         <div id="box1" class="backGround">
-            <div class="bgImg img01" v-bind:style="{'background-image': 'url('+ selfintro.img1.url +')'}"></div>
-            <div class="bgImg img02" v-bind:style="{'background-image': 'url('+ selfintro.img2.url +')', 'animation-delay': '4s'}"></div>
-            <div class="bgImg img03" v-bind:style="{'background-image': 'url('+ selfintro.img3.url +')', 'animation-delay': '8s'}"></div>
-            <div class="bgImg img04" v-bind:style="{'background-image': 'url('+ selfintro.img4.url +')', 'animation-delay': '12s'}"></div>
+            <div class="bgImg img01" v-bind:style="{'background-image': 'url('+ selfintro.img01 +')'}"></div>
+            <div class="bgImg img02" v-bind:style="{'background-image': 'url('+ selfintro.img02 +')', 'animation-delay': '4s'}"></div>
+            <div class="bgImg img03" v-bind:style="{'background-image': 'url('+ selfintro.img03 +')', 'animation-delay': '8s'}"></div>
+            <div class="bgImg img04" v-bind:style="{'background-image': 'url('+ selfintro.img04 +')', 'animation-delay': '12s'}"></div>
             <div class="innner1" style="padding: 10% 0;">
             </div>
         </div>
