@@ -66,7 +66,7 @@
             </div>
         </div>
         <div id="box5" class="quicksand" style="text-align: right; color: #999;">
-            <small>© 2021 kimoty.net</small>
+            <small>{{ selfintro.copyright }}</small>
         </div>
     </div>
 </div>
