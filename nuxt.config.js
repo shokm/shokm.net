@@ -18,17 +18,19 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap', async: true, defer: true, body: true
+        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap',
+        body: true
       },
       {
         rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', async: true, defer: true, body: true
+        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
+        body: true
       }
     ]
 
     /*
     script: [
-      { src: 'https://example.com/example.js', defer: true },
+      { src: 'https://example.com/example.js', async: true, defer: true, body: true },
     ]
     */
   },
