@@ -18,13 +18,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap',
-        body: true
+        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kiwi+Maru&family=Quicksand&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
-        body: true
+        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css'
       }
     ]
 
