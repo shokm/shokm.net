@@ -3,10 +3,10 @@
     <div id="navbar">
         <h1 class="fredoka_one">kimoty.net</h1>
         <p class="fredoka_one navbar">
-            <a href="#box1" uk-scroll>TOP</a><br>
-            <a href="#box2" uk-scroll>ABOUT</a><br>
-            <a href="#box3" uk-scroll>SKILLS</a><br>
-            <a href="#box4" uk-scroll>CREATED</a>
+            <a href="#box1">TOP</a><br>
+            <a href="#box2">ABOUT</a><br>
+            <a href="#box3">SKILLS</a><br>
+            <a href="#box4">CREATED</a>
         </p>
     </div>
     <div id="contents">
@@ -15,7 +15,7 @@
             <div class="bgImg img02" v-bind:style="{'background-image': 'url('+ selfintro.img02 +')', 'animation-delay': '4s'}"></div>
             <div class="bgImg img03" v-bind:style="{'background-image': 'url('+ selfintro.img03 +')', 'animation-delay': '8s'}"></div>
             <div class="bgImg img04" v-bind:style="{'background-image': 'url('+ selfintro.img04 +')', 'animation-delay': '12s'}"></div>
-            <div class="innner1"></div>
+            <div class="innnerTop"></div>
         </div>
         <div id="box2">
             <div class="innner">
@@ -25,8 +25,8 @@
                         <h3><i class="fas fa-user"></i> 自己紹介</h3>
                         <span class="text" v-html="selfintro.text"></span>
                         <p>
-                                <i class="fab fa-twitter-square"></i> <a id="twitter" v-bind:href='"https://twitter.com/" + selfintro.twitter'>Twitter</a> |
-                                <i class="fab fa-github-square"></i> <a id="github" v-bind:href='"https://github.com/" + selfintro.github'>Github</a>
+                            <i class="fab fa-twitter-square"></i> <a id="twitter" v-bind:href='"https://twitter.com/" + selfintro.twitter'>Twitter</a> |
+                            <i class="fab fa-github-square"></i> <a id="github" v-bind:href='"https://github.com/" + selfintro.github'>Github</a>
                             <!-- <i class="fas fa-envelope-square"></i> admin<i class="fas fa-at"></i>example.com -->
                         </p>
                     </div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div id="box5" class="quicksand" style="text-align: right; color: #999;">
+        <div id="box5" class="footer quicksand">
             <small>{{ selfintro.copyright }}</small>
         </div>
     </div>
@@ -95,9 +95,9 @@ export default {
 </script>
 <style>
 @media screen and (max-width: 500px) { 
-    /* 画面サイズが480pxまで */
+    /* 画面サイズが500pxまで */
     .innner {
-        width:  100%;
+        width: 100%;
     }
 
     /*
@@ -125,7 +125,7 @@ export default {
     }
 }
 @media screen and (min-width: 501px) {
-    /* 画面サイズが481pxから */
+    /* 画面サイズが501pxから */
     .innner {
         width: 75vw;
     }
@@ -301,7 +301,7 @@ li {
         margin-left: 1em;
     }
 }
-.innner1 {
+.innnerTop {
     height: 100vh;
 }
 .innner {
@@ -310,6 +310,10 @@ li {
 }
 .padding {
     padding: 2em 1em;
+}
+.footer {
+    color: #999;
+    text-align: right;
 }
 .fredoka_one {
     font-family: 'Fredoka One', cursive;
@@ -339,9 +343,9 @@ li {
     right: 0;
     opacity: 0;
     animation: bgAnime 16s infinite; /* 4画像 × 各4s = 16s */
-    background-size:  cover;
-    background-repeat:  no-repeat;
-    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 /*
@@ -368,32 +372,4 @@ li {
     31% { opacity: 0; }
     100% { opacity: 0; }
 }
-
-/* ityped */
-
-/*
-.ityped-cursor {
-    font-size: 1em;
-    opacity: 1;
-    -webkit-animation: blink 0.3s infinite;
-    -moz-animation: blink 0.3s infinite;
-    animation: blink 0.3s infinite;
-    animation-direction: alternate;
-}
-@keyframes blink {
-    100% {
-        opacity: 0;
-    }
-}
-@-webkit-keyframes blink {
-    100% {
-        opacity: 0;
-    }
-}
-@-moz-keyframes blink {
-    100% {
-        opacity: 0;
-    }
-}
-*/
 </style>
