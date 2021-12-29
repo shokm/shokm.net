@@ -35,6 +35,11 @@ export default {
     */
   },
 
+  // ビルド時のjs削除
+  render: {
+    injectScripts: false,
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
