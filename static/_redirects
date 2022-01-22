@@ -1,3 +1,5 @@
 /tools/zoom https://zoom.kimoty.net/ 301
 /tools/zoom/* https://zoom.kimoty.net/:splat 301
 /tools/TCU-LogoGenerator/* https://logogene.kimoty.net/:splat 301
+/zoom/* https://szu.pages.dev/:splat 200
+/TCU-LogoGenerator/* https://logogene.kimoty.net/:splat 200
