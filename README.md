@@ -1,4 +1,4 @@
-# kimoty.net-nuxt
+# kimoty.net
 
 ## Build Setup
 

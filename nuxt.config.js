@@ -37,7 +37,7 @@ export default {
 
   // ビルド時のjs削除
   render: {
-    injectScripts: false,
+    injectScripts: false
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -56,13 +56,14 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
