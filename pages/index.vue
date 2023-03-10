@@ -2,7 +2,7 @@
   <div>
     <div id="navbar">
       <h1 class="fredoka_one">
-        kimoty.net
+        {{ selfintro.title }}
       </h1>
       <p class="fredoka_one navbar">
         <a href="#box1">TOP</a><br>
@@ -13,10 +13,31 @@
     </div>
     <div id="contents">
       <div id="box1" class="backGround">
-        <div class="bgImg img01" :style="{'background-image': 'url('+ selfintro.img01.url +')'}" />
-        <div class="bgImg img02" :style="{'background-image': 'url('+ selfintro.img02.url +')', 'animation-delay': '4s'}" />
-        <div class="bgImg img03" :style="{'background-image': 'url('+ selfintro.img03.url +')', 'animation-delay': '8s'}" />
-        <div class="bgImg img04" :style="{'background-image': 'url('+ selfintro.img04.url +')', 'animation-delay': '12s'}" />
+        <div
+          class="bgImg img01"
+          :style="{ 'background-image': 'url(' + selfintro.img01.url + ')' }"
+        />
+        <div
+          class="bgImg img02"
+          :style="{
+            'background-image': 'url(' + selfintro.img02.url + ')',
+            'animation-delay': '4s'
+          }"
+        />
+        <div
+          class="bgImg img03"
+          :style="{
+            'background-image': 'url(' + selfintro.img03.url + ')',
+            'animation-delay': '8s'
+          }"
+        />
+        <div
+          class="bgImg img04"
+          :style="{
+            'background-image': 'url(' + selfintro.img04.url + ')',
+            'animation-delay': '12s'
+          }"
+        />
         <div class="innnerTop" />
       </div>
       <div id="box2">
@@ -29,8 +50,16 @@
               <h3><i class="fas fa-user" /> 自己紹介</h3>
               <span class="text" v-html="selfintro.text" />
               <p>
-                <i class="fab fa-twitter-square" /> <a id="twitter" :href="'https://twitter.com/' + selfintro.twitter">Twitter</a> |
-                <i class="fab fa-github-square" /> <a id="github" :href="'https://github.com/' + selfintro.github">Github</a>
+                <i class="fab fa-twitter-square" />
+                <a
+                  id="twitter"
+                  :href="'https://twitter.com/' + selfintro.twitter"
+                >Twitter</a>
+                | <i class="fab fa-github-square" />
+                <a
+                  id="github"
+                  :href="'https://github.com/' + selfintro.github"
+                >Github</a>
                 <!-- <i class="fas fa-envelope-square"></i> admin<i class="fas fa-at"></i>example.com -->
               </p>
             </div>
@@ -85,18 +114,28 @@ import axios from 'axios'
 export default {
   async asyncData () {
     const res = await Promise.all([
-      axios.get(
-        'https://kimoto.microcms.io/api/v1/selfintro',
-        { headers: { 'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY } }
-      ),
-      axios.get(
-        'https://kimoto.microcms.io/api/v1/created',
-        { headers: { 'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY } }
-      )
+      axios.get('https://kimoto.microcms.io/api/v1/selfintro', {
+        headers: { 'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY }
+      }),
+      axios.get('https://kimoto.microcms.io/api/v1/created?limit=1000', {
+        headers: { 'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY }
+      })
     ])
     return {
       selfintro: res[0].data,
       created: res[1].data.contents
+    }
+  },
+  head () {
+    return {
+      title: this.selfintro.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.selfintro.description
+        }
+      ]
     }
   }
 }
@@ -109,7 +148,7 @@ export default {
     width: 100%;
   }
 
-  .navbar{
+  .navbar {
     /* display: none; */
   }
 
