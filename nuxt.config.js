@@ -25,21 +25,16 @@ export default {
         href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css'
       }
     ]
-
-    /*
-    script: [
-      { src: 'https://example.com/example.js', async: true, defer: true, body: true },
-    ]
-    */
   },
 
-  // ビルド時のjs削除
+  // ビルド時にjs削除
   render: {
     injectScripts: false
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
