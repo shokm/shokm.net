@@ -5,14 +5,14 @@
         {{ selfintro.title }}
       </h1>
       <p class="fredoka_one navbar">
-        <a href="#box1">TOP</a><br>
-        <a href="#box2">ABOUT</a><br>
-        <a href="#box3">SKILLS</a><br>
-        <a href="#box4">CREATED</a>
+        <a href="#top">TOP</a><br>
+        <a href="#about">ABOUT</a><br>
+        <a href="#skills">SKILLS</a><br>
+        <a href="#created">CREATED</a>
       </p>
     </div>
     <div id="contents">
-      <div id="box1" class="backGround">
+      <div id="top" class="section01 backGround">
         <div
           class="bgImg img01"
           :style="{ 'background-image': 'url(' + selfintro.img01.url + ')' }"
@@ -40,13 +40,13 @@
         />
         <div class="innnerTop" />
       </div>
-      <div id="box2">
+      <div id="about" class="section02">
         <div class="innner">
           <div class="padding">
             <h2 class="quicksand">
               About
             </h2>
-            <div class="box kiwi_maru">
+            <div class="box01 kiwi_maru">
               <h3><i class="fas fa-user" /> 自己紹介</h3>
               <span class="text" v-html="selfintro.text" />
               <p>
@@ -66,7 +66,7 @@
                     :href="'https://github.com/' + selfintro.github"
                   >Github</a>
                 </span>
-                <span v-if="selfintro.email">
+                <span v-if="selfintro.email.user || selfintro.email.domain">
                   <span v-if="selfintro.twitter || selfintro.github">|</span>
                   <i class="fas fa-envelope-square" /> {{ selfintro.email.user
                   }}<i class="fas fa-at" />{{ selfintro.email.domain }}
@@ -76,18 +76,18 @@
           </div>
         </div>
       </div>
-      <div id="box3">
+      <div id="skills" class="section03">
         <div class="innner">
           <div class="padding">
             <h2 class="quicksand">
               Skills
             </h2>
             <div class="flex kiwi_maru">
-              <div class="box2">
+              <div class="box02">
                 <h3><i class="fas fa-code" /> プログラミング</h3>
                 <span v-html="selfintro.pg" />
               </div>
-              <div class="box3">
+              <div class="box03">
                 <h3><i class="fas fa-music" /> 音楽</h3>
                 <span v-html="selfintro.mus" />
               </div>
@@ -95,13 +95,13 @@
           </div>
         </div>
       </div>
-      <div id="box4">
+      <div id="created" class="section04">
         <div class="innner">
           <div class="padding">
             <h2 class="quicksand">
               Created
             </h2>
-            <div class="box kiwi_maru">
+            <div class="box01 kiwi_maru">
               <h3><i class="fas fa-hammer" /> 作ったもの</h3>
               <ul>
                 <li v-for="content in created" :key="content.id">
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div id="box5" class="footer quicksand">
+      <div id="footer" class="section05 footer quicksand">
         <small>{{ selfintro.copyright }}</small>
       </div>
     </div>
