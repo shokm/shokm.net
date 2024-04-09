@@ -22,7 +22,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css'
+        href: 'https://use.fontawesome.com/releases/v6.5.2/css/all.css'
       }
     ]
   },
