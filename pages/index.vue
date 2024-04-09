@@ -51,15 +51,15 @@
               <span class="text" v-html="selfintro.text" />
               <p>
                 <span v-if="selfintro.twitter">
-                  <i class="fab fa-twitter-square" />
+                  <i class="fa-brands fa-square-x-twitter" />
                   <a
                     id="twitter"
                     :href="'https://twitter.com/' + selfintro.twitter"
-                  >Twitter</a>
+                  >X (Twitter)</a>
                 </span>
                 <span v-if="selfintro.github">
                   <span v-if="selfintro.twitter">|</span>
-                  <i class="fab fa-github-square" />
+                  <i class="fa-brands fa-github-square" />
                   <a
                     v-if="selfintro.github"
                     id="github"
@@ -102,7 +102,7 @@
               Created
             </h2>
             <div class="box01 kiwi_maru">
-              <h3><i class="fas fa-hammer" /> 作ったもの</h3>
+              <h3><i class="fas fa-hammer" /> 制作物</h3>
               <ul>
                 <li v-for="content in created" :key="content.id">
                   <a :href="content.url">{{ content.title }}</a>
