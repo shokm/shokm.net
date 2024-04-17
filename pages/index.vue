@@ -13,31 +13,10 @@
     </div>
     <div id="contents">
       <div id="top" class="section01 backGround">
-        <div
-          class="bgImg img01"
-          :style="{ 'background-image': 'url(' + selfintro.img01.url + ')' }"
-        />
-        <div
-          class="bgImg img02"
-          :style="{
-            'background-image': 'url(' + selfintro.img02.url + ')',
-            'animation-delay': '4s'
-          }"
-        />
-        <div
-          class="bgImg img03"
-          :style="{
-            'background-image': 'url(' + selfintro.img03.url + ')',
-            'animation-delay': '8s'
-          }"
-        />
-        <div
-          class="bgImg img04"
-          :style="{
-            'background-image': 'url(' + selfintro.img04.url + ')',
-            'animation-delay': '12s'
-          }"
-        />
+        <div class="bgImg img01" :style="{ 'background-image': 'url(' + selfintro.img01.url + ')' }" />
+        <div class="bgImg img02" :style="{ 'background-image': 'url(' + selfintro.img02.url + ')', 'animation-delay': '4s' }" />
+        <div class="bgImg img03" :style="{ 'background-image': 'url(' + selfintro.img03.url + ')', 'animation-delay': '8s' }" />
+        <div class="bgImg img04" :style="{ 'background-image': 'url(' + selfintro.img04.url + ')', 'animation-delay': '12s' }" />
         <div class="innnerTop" />
       </div>
       <div id="about" class="section02">
@@ -52,19 +31,12 @@
               <p>
                 <span v-if="selfintro.twitter">
                   <i class="fa-brands fa-square-x-twitter" />
-                  <a
-                    id="twitter"
-                    :href="'https://twitter.com/' + selfintro.twitter"
-                  >X (Twitter)</a>
+                  <a id="twitter" :href="'https://twitter.com/' + selfintro.twitter">X (Twitter)</a>
                 </span>
                 <span v-if="selfintro.github">
                   <span v-if="selfintro.twitter">|</span>
                   <i class="fa-brands fa-github-square" />
-                  <a
-                    v-if="selfintro.github"
-                    id="github"
-                    :href="'https://github.com/' + selfintro.github"
-                  >Github</a>
+                  <a v-if="selfintro.github" id="github" :href="'https://github.com/' + selfintro.github">Github</a>
                 </span>
                 <span v-if="selfintro.email.user || selfintro.email.domain">
                   <span v-if="selfintro.twitter || selfintro.github">|</span>
@@ -143,11 +115,24 @@ export default {
     return {
       title: this.selfintro.title,
       meta: [
+        { hid: 'og:type', property: 'og:type', content: 'website' },
         {
           hid: 'description',
           name: 'description',
           content: this.selfintro.description
-        }
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.selfintro.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.selfintro.description
+        },
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'og:image', property: 'og:image', content: this.selfintro.ogp.url }
       ]
     }
   }
